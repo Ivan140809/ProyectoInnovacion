@@ -26,7 +26,7 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
+EduTrace - Contextualización del problema mediante ánalisis multidimensional. 
 }
 
 %\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
@@ -44,12 +44,10 @@ Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
 %         {\tt\small pmisra@cs.wright.edu}}
 %}
 
-\author{Iván Santiago Lastra Romero, Marlon Jhoan Garcia Restrepo, Cesar Santiago Canro Cabra}
+\author{Ivan Santiago Lastra Romero, Marlon Jhoan Garcia Restrepo, Cesar Santiago Canro Cabra}
 
 
 \begin{document}
-
-
 
 \maketitle
 \thispagestyle{empty}
@@ -57,44 +55,39 @@ Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
+\textit{Resumen}
 
-This electronic document is a ``live'' template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
-
-\end{abstract}
-
+TODO 
 
 
 \section{Introducción}
 
-En este documento se analiza un tópico desde diferentes ámbitos, con especial énfasis en el contexto educativo, con el propósito de identificar los principales desafíos asociados a la integración de la inteligencia artificial en los procesos de evaluación y retroalimentación de los estudiantes.
-
-Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente 
+En este documento se analiza la retroalimentacion y la situación problema que parte desde 
 \section{Contexto}
     \subsection{Ámbito Pedagógico} 
-    La retroalimentación es un elemento importante en el ámbito de la educación, ya que asegura que cada estudiante pueda tener un informe confiable y una opinión experta sobre su trabajo. Además, ayuda a los profesores a garantizar el aprendizaje de los estudiantes en cualquier área que lo requieran. Es por ello que es necesario el uso de la retroalimentación como una herramienta que facilite tanto el aprendizaje del estudiante como la enseñanza de los profesores. Sin embargo, esta herramienta puede tener un impacto tanto positivo como negativo según cómo se diseñe y entregue [1].
+    La retroalimentación constituye uno de los factores de mayor impacto en el ámbito de la educación y el aprendizaje, ya que asegura que cada estudiante pueda tener un informe confiable y una opinión experta sobre su trabajo. Además, ayuda a los profesores a garantizar el aprendizaje de los estudiantes en cualquier área que lo requieran. Es por ello que es necesario el uso de la retroalimentación como una herramienta que facilite tanto el aprendizaje del estudiante como la enseñanza de los profesores. Sin embargo, esta herramienta puede tener un impacto tanto positivo como negativo según cómo se diseñe y entregue [1].
 
-    El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y persona. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje[6] a las cuales debe estar orientado. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada [7].
+    El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y persona. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje [6] a las cuales debe estar orientado. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada [6][7].
 
-    Las pruebas y la evidencia señalan que la retroalimentación formativa alcanza su mayor efectividad en contextos de atención personalizada, como en tutorías uno a uno, donde el docente está permanentemente pendiente del proceso de cada estudiante []. A pesar de esto, este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. En estas condiciones, responder a la tercera pregunta resulta muy complicado, por lo que suele dejarse de lado y sacrificarse dentro del proceso de aprendizaje, quedando la falta de tiempo como una de las principales causas de la ausencia de retroalimentación. Esto deriva, en consecuencia, en la priorización de la calificación sobre el proceso formativo. 
-    
-    Partiendo de esta base, se establece que la etapa del ¿Qué sigue? en la retroalimentación es aquella en la que la educación presenta mayores dificultades al momento de guiar al estudiante en sus trabajos y proyectos, en especial durante la retroalimentación de tareas, proyectos o algún otro elemento calificable. Este vacío se agudiza en contextos aterrizados a escenarios como el colombiano, donde predomina un enfoque centrado en la calificación por encima de la retroalimentación formativa [8], y más aún con la llegada de la IA, más aún con la llegada de la IA, que introduce nuevas posibilidades y tensiones en este proceso, asi como la retroalimentación bajo el criterio del docente y así mismo se establece para el tema de dar una calificación o un juicio determinado de un trabajo.
+    Las pruebas y la evidencia señalan que la retroalimentación formativa alcanza su mayor efectividad en contextos de atención cercana y orientada según el criterio del profesor, como en tutorías uno a uno, donde el docente está permanentemente pendiente del proceso de cada estudiante [11].
 
-    En este contexto, al momento de realizar una retroalimentación por parte de los profesores, es importante distinguirla del proceso de calificar, definido como la emisión de un juicio sumativo sobre un determinado trabajo. Esta diferencia afecta directamente el ámbito pedagógico, ya que durante el proceso de evaluación pueden presentarse riesgos documentados, como sesgos o preferencias hacia determinados estudiantes [9].
+    Partiendo de esta base, se establece que la etapa del ¿Qué sigue? en la retroalimentación es aquella en la que la educación presenta mayores dificultades al momento de guiar al estudiante en sus trabajos y proyectos, en especial durante la retroalimentación de tareas, proyectos o algún otro elemento calificable, ya que este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. Por ello, esta última etapa es la que más se suele sacrificar en los procesos de aprendizaje y, por lo tanto, el proceso se repliega hacia la calificación.
 
-    Actualmente, en Colombia, uno de los principales problemas es la priorización de la nota o calificación sobre la propia retroalimentación [10]. Esto ocasiona que se omitan muchas de las fases que debería tener un proceso de retroalimentación formativa. Como consecuencia, la calificación se convierte en uno de los elementos prioritarios tanto para profesores como para estudiantes.
+    Esta debilidad es especialmente crítica en los cursos introductorios de programación, donde hasta un tercio de los estudiantes reprueba el primer curso de programación a nivel mundial, en un área donde la retroalimentación oportuna es más necesaria [19]. En el contexto local de Colombia, y en específico de la Pontificia Universidad Javeriana, se aplicó una encuesta propia a 50 estudiantes de introducción a la programación [Anexo A], la cual evidenció que el 67% de la población percibió el curso con una dificultad media-alta y que el 66% consideró que esas dificultades eran comunes o muy comunes entre sus compañeros, mostrando un problema generalizado en el entorno que se quiere analizar. Además, el 72% reconoció la retroalimentación como útil para mejorar su código, mostrando una demanda real de acompañamiento formativo que las condiciones actuales no alcanzan a satisfacer, lo que evidencia una brecha entre la retroalimentación que la enseñanza de la programación requiere y la que las condiciones reales permiten sostener.
 
-    Cabe señalar, además, que la retroalimentación cumple su función únicamente cuando el estudiante actúa sobre ella y la regula, por lo que su propósito es desarrollar la autonomía del estudiante en su proceso de aprendizaje[11], sin dejar de lado la calificación y la apreciación del profesor, quien actúa como una guía durante dicho proceso. A partir de ello, surge la necesidad de Se configura así una brecha entre lo deseable y lo que las condiciones reales permiten sostener en especial entre una retroalimentación formativa, personalizada y centrada en la autonomía del estudiante, favoreciendo la continuidad de su proceso de aprendizaje. 
+    Con ello, cabe aclarar que la dificultad de retroalimentar en programación tiene varias raíces: un mismo problema puede admitir muchas soluciones válidas, y un programa puede funcionar correctamente y aun así estar mal estructurado, ser poco legible o carecer de documentación. Evaluar estos aspectos exige un criterio experto que va más allá de verificar si el código funciona, lo que hace que la retroalimentación de calidad sea, en este dominio, más costosa en tiempo y más dependiente del juicio del docente.
     
      
     \subsection{Ámbito Tecnológico} 
     Desde hace décadas se ha querido introducir la innovación tecnológica y el uso de estas en el ámbito educativo, enfocándose, en buena parte, en el desarrollo de sistemas orientados a evaluar entregables y generar retroalimentación de forma automática para aliviar la carga docente, crear procesos eficientes de aprendizaje y ofrecer una respuesta mucho más oportuna al estudiante [13]. Es por ello que la necesidad de sostener una retroalimentación de entregables a gran escala ha aumentado de forma sostenida en los últimos años, especialmente en el campo de la tecnología y la innovación en TI, dando lugar a distintas generaciones de herramientas de evaluación asistida. Sin embargo, actualmente no se presenta una herramienta sólida que pueda suplir esta necesidad de forma amplia.
 
-    La evidencia sistemática indica que las herramientas de retroalimentación son eficaces, sobre todo, para la identificación de errores y la verificación de la corrección del trabajo, pero ofrecen un acompañamiento mucho menor sobre cómo corregir un trabajo y acompañar al estudiante después de esa corrección [14]. Aunque permiten responder con relativa solvencia a las dos primeras preguntas del proceso formativo, presentan mayores dificultades para abordar la tercera pregunta, relacionada con el seguimiento del estudiante. Esta limitación ha sido una de las más difíciles de superar con la tecnología desarrollada hasta el momento. A esta restricción se suma que los docentes a menudo no pueden adaptar estas herramientas a las particularidades de su curso o de su criterio, ya sea por su complejidad u otros motivos.
+    La evidencia sistemática indica que las herramientas de retroalimentación son eficaces, sobre todo, para la identificación de errores y la verificación de la corrección del trabajo, pero ofrecen un acompañamiento mucho menor sobre cómo corregir un trabajo y acompañar al estudiante después de esa corrección [14]. De hecho, una revisión de 121 estudios confirma que las herramientas automáticas se concentran en verificar la corrección del código y carecen de un enfoque pedagógico para acompañar la legibilidad, la mantenibilidad y la documentación del software [15]. Aunque permiten responder con relativa solvencia a las dos primeras preguntas del proceso formativo, presentan mayores dificultades para abordar la tercera pregunta, relacionada con el seguimiento del estudiante. Esta limitación ha sido una de las más difíciles de superar con la tecnología desarrollada hasta el momento. A esta restricción se suma que los docentes a menudo no pueden adaptar estas herramientas a las particularidades de su curso o de su criterio, ya sea por su complejidad u otros motivos.
 
     Otra restricción presente en el ámbito tecnológico es que la evaluación automatizada de los diferentes entregables y la retroalimentación funcionan bien con evaluaciones estructuradas y de respuesta previsible; sin embargo, pierden eficacia ante trabajos altamente creativos que involucran estructuras o desarrollos diferentes entre un estudiante y otro [15]. En este tipo de entregables, los estudiantes desarrollan el problema de formas alternativas y no existe una única solución con la cual comparar el resultado. Precisamente, este tipo de trabajos, que requieren una mayor retroalimentación y poseen un mayor valor formativo, son aquellos en los que la tecnología presenta mayores limitaciones.
 
-    Con este panorama, la llegada de herramientas de IA y de los modelos de lenguaje a gran escala introduce un cambio relevante, pues estas herramientas tecnológicas han facilitado una retroalimentación más elaborada, contextual y más cercana al lenguaje humano que las herramientas previas [16]. La evidencia sugiere que, dentro de unos parámetros establecidos y con criterios de evaluación claros, estos modelos pueden aproximarse a la calidad de un evaluador humano [16]. Sin embargo, estas herramientas aún siguen condicionadas al diseño de las tareas y a los criterios que se les proporcionen. Además, las investigaciones actuales han prestado poca atención a cómo se integra el criterio del docente en este proceso, lo que replantea el rol del humano en la evaluación mediada e integrada por la IA.
+    Con este panorama, la llegada de herramientas tecnologicas y de los modelos de lenguaje a gran escala introduce un cambio relevante, pues estas herramientas tecnológicas han facilitado una retroalimentación más elaborada, contextual y más cercana al lenguaje humano que las herramientas previas [16]. La evidencia sugiere que, dentro de unos parámetros establecidos y con criterios de evaluación claros, estos modelos pueden aproximarse a la calidad de un evaluador humano [16]. Sin embargo, estas herramientas aún siguen condicionadas al diseño de las tareas y a los criterios que se les proporcionen. Además, las investigaciones actuales han prestado poca atención a cómo se integra el criterio del docente en este proceso, lo que replantea el rol del humano en la evaluación mediada e integrada por la IA.
+
+    La evidencia reciente en cursos introductorios de programación muestra que una herramienta tecnologica alcanzó un 86% de exactitud frente a la calificación humana en más de 6.000 entregas analizadas [20]. Sin embargo, la concordancia con el criterio real del docente es solo moderada, por lo que la investigación converge especialmente en  modelos human-in-the-loop, en los que la herramienta asiste pero el criterio final permanece humano y cercano a el profesor [21].
 
     A partir de ello, se establece que estas herramientas pueden ser muy beneficiosas al momento de utilizarlas. Sin embargo, también presentan riesgos relacionados con la confiabilidad y la consistencia de sus resultados, así como con la posibilidad de reproducir sesgos presentes en sus datos y con la necesidad de asegurar que la retroalimentación generada impulse efectivamente el aprendizaje y no se limite únicamente a entregar un resultado [17]. En este sentido, la literatura coincide en que la tecnología actual no permite excluir el rol del docente en los procesos de calificación y retroalimentación de trabajos. Esta brecha entre las capacidades tecnológicas actuales y la necesidad de una retroalimentación formativa de calidad evidencia la importancia de desarrollar herramientas que integren la participación del docente sin renunciar a las ventajas que ofrece la inteligencia artificial.
 
@@ -171,40 +164,42 @@ Este análisis busca formular una solución que no solo responda al tópico plan
 
 \bibitem{5} F. Miao and W. Holmes, Guidance for generative AI in education and research. Paris, France: UNESCO, 2023. [Online].
 
-\bibitem{6} Sadler, D. R. (1989). Formative assessment and the design of instructional systems. Instructional Science, 18(2), 119–144. https://doi.org/10.1007/BF00117714
+\bibitem[6] Sadler, D. R. (1989). Formative assessment and the design of instructional systems. Instructional Science, 18(2), 119–144. https://doi.org/10.1007/BF00117714
 
-\bibitem{7} Black, P., \& Wiliam, D. (2010). Inside the Black Box: Raising Standards through Classroom Assessment. Phi Delta Kappan, 92(1), 81-90.
+\bibitem[7] Black, P., \& Wiliam, D. (2010). Inside the Black Box: Raising Standards through Classroom Assessment. Phi Delta Kappan, 92(1), 81-90.
 
-\bibitem{8} GADE: Revista Científica, ISSN-e 2745-2891, Vol. 6, Nº. 1, 2026 (Ejemplar dedicado a: Education Without Borders), págs. 95-116
+\bibitem[8] GADE: Revista Científica, ISSN-e 2745-2891, Vol. 6, Nº. 1, 2026 (Ejemplar dedicado a: Education Without Borders), págs. 95-116
 
-\bibitem{9}  Malouff, J. M., \& Thorsteinsson, E. B. (2016). Bias in grading: A meta-analysis of experimental research findings. Australian Journal of Education, 60(3), 245-256.
+\bibitem[9]  Malouff, J. M., \& Thorsteinsson, E. B. (2016). Bias in grading: A meta-analysis of experimental research findings. Australian Journal of Education, 60(3), 245-256.
 
-\bibitem{10} Butler, R. (1987). Task-involving and ego-involving properties of evaluation: Effects of different feedback conditions on motivational perceptions, interest, and performance. Journal of Educational Psychology, 79(4), 474–48
+\bibitem[10] Butler, R. (1987). Task-involving and ego-involving properties of evaluation: Effects of different feedback conditions on motivational perceptions, interest, and performance. Journal of Educational Psychology, 79(4), 474–48
 
-\bibitem{11} Nicol, D., \& Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje autorregulado: un modelo y siete principios de buenas prácticas de retroalimentación. Studies in Higher Education, 31, 199-218
+\bibitem[11] Nicol, D., \& Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje autorregulado: un modelo y siete principios de buenas prácticas de retroalimentación. Studies in Higher Education, 31, 199-218
 
-\bibitem{12} Shubha, S., Gopala Krishna Murthy, H. R., \& Shubhakar, S. (2026). AI-based automated grading and feedback systems: Technologies, challenges and future directions in higher education. International Journal of Research and Innovation in Applied Science, 11(2), 267–279
+\bibitem[12] Shubha, S., Gopala Krishna Murthy, H. R., \& Shubhakar, S. (2026). AI-based automated grading and feedback systems: Technologies, challenges and future directions in higher education. International Journal of Research and Innovation in Applied Science, 11(2), 267–279
 
-\bibitem{13} Ala-Mutka, Kirsti. (2005). A Survey of Automated Assessment Approaches for Programming Assignments. Computer Science Education. 15. 83-102. 10.1080/08993400500150747.
+\bibitem[13] Ala-Mutka, Kirsti. (2005). A Survey of Automated Assessment Approaches for Programming Assignments. Computer Science Education. 15. 83-102. 10.1080/08993400500150747.
 
-\bibitem{14} Keuning, Jeuring \& Heeren (2018), A Systematic Literature Review of Automated Feedback Generation for Programming Exercises. DOI: 10.1145/3231711
+\bibitem[14] Keuning, Jeuring \& Heeren (2018), A Systematic Literature Review of Automated Feedback Generation for Programming Exercises. DOI: 10.1145/3231711
 
-\bibitem{15} Messer, Brown, Kölling \& Shi (2024), Automated Grading and Feedback Tools for Programming Education: A Systematic Review. DOI: 10.1145/3636515
+\bibitem[15] Messer, Brown, Kölling \& Shi (2024), Automated Grading and Feedback Tools for Programming Education: A Systematic Review. DOI: 10.1145/3636515
 
-\bibitem{16} Lee, S. S., \& Moore, R. L. (2024). Harnessing Generative AI (GenAI) for Automated Feedback in Higher Education: A Systematic Review. Online Learning, 28(3). 
+\bibitem[16] Lee, S. S., \& Moore, R. L. (2024). Harnessing Generative AI (GenAI) for Automated Feedback in Higher Education: A Systematic Review. Online Learning, 28(3). 
 
-\bibitem{17} Ma, Z., Du, C., Lao, Q., \& Xie, X. (2026). Generative artificial intelligence: Applications and future prospects in dentistry. International Dental Journal, 76(1), Article 108276. https://doi.org/10.1016/j.identj.2025.108276
-\bibitem{18} Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura. (2021). Recomendación sobre la ética de la inteligencia artificial. UNESCO. 
+\bibitem[17] Ma, Z., Du, C., Lao, Q., \& Xie, X. (2026). Generative artificial intelligence: Applications and future prospects in dentistry. International Dental Journal, 76(1), Article 108276. https://doi.org/10.1016/j.identj.2025.108276
+\bibitem[18] Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura. (2021). Recomendación sobre la ética de la inteligencia artificial. UNESCO. 
 
-\bibitem{19} E. F. Risko and S. J. Gilbert, "Cognitive offloading," Trends Cogn. Sci., vol. 20, no. 9, pp. 676-688, Sep. 2016. doi: 10.1016/j.tics.2016.07.002.
+\bibitem[19] E. F. Risko and S. J. Gilbert, "Cognitive offloading," Trends Cogn. Sci., vol. 20, no. 9, pp. 676-688, Sep. 2016. doi: 10.1016/j.tics.2016.07.002.
 
-\bibitem{20} Nicol, D. J., \& Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. Studies in Higher Education, 31(2), 199-218.
+\bibitem[20] Nicol, D. J., \& Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. Studies in Higher Education, 31(2), 199-218.
 
-\bibitem{21} Ministerio de Educación Nacional. (2024, 5 de diciembre). Equidad e inclusión: retos de la inteligencia artificial en los sistemas educativos del mundo [Comunicado de prensa].
+\bibitem[21] Ministerio de Educación Nacional. (2024, 5 de diciembre). Equidad e inclusión: retos de la inteligencia artificial en los sistemas educativos del mundo [Comunicado de prensa].
 
-\bibitem{22} Inteligencia artificial y brecha digital en la educación superior: revisión internacional con foco en Colombia. (2026). GADE: Revista Científica.
+\bibitem[22] Inteligencia artificial y brecha digital en la educación superior: revisión internacional con foco en Colombia. (2026). GADE: Revista Científica.
 
-\bibitem{23} Artificial Intelligence and Cost Reduction in Public Higher Education: A Scoping Review of Emerging Evidence (2026). arXiv:2604.04741.
+\bibitem[23] Artificial Intelligence and Cost Reduction in Public Higher Education: A Scoping Review of Emerging Evidence (2026). arXiv:2604.04741.
+
+\bibitem[24] 
 
 \end{thebibliography}
 
