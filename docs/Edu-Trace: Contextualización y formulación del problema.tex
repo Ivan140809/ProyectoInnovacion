@@ -26,25 +26,44 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
+Edu-Trace: Contextualización y formulación del problema
 }
 
-%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
-%         \thanks{*Use the $\backslash$thanks command to put information here}\\
-%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
-%         University of Twente\\
-%         7500 AE Enschede, The Netherlands\\
-%         {\tt\small h.kwakernaak@autsubmit.com}}
-%         \hspace*{ 0.5 in}
-%         \parbox{3 in}{ \centering Pradeep Misra**
-%         \thanks{**The footnote marks may be inserted manually}\\
-%        Department of Electrical Engineering \\
-%         Wright State University\\
-%         Dayton, OH 45435, USA\\
-%         {\tt\small pmisra@cs.wright.edu}}
-%}
-
-\author{Iván Santiago Lastra Romero, Marlon Jhoan Garcia Restrepo, Cesar Santiago Canro Cabra}
+\author{
+	% --- Primera fila (3 Autores) ---
+	\parbox{2.0 in}{\centering 1\textsuperscript{st} Samuel Iregui Franco\\
+		\footnotesize\textit{Departamento de Ingeniería de Sistemas}\\
+		\footnotesize\textit{Pontificia Universidad Javeriana}\\
+		 Bogotá, Colombia\\
+		{\footnotesize ireguis@javeriana.edu.co}}
+	\hspace*{0.1 in}
+	\parbox{2.0 in}{\centering 2\textsuperscript{nd} Cesar Santiago Canro Cabra\\
+		\footnotesize\textit{Departamento de Ingeniería de Sistemas}\\
+		\footnotesize\textit{Pontificia Universidad Javeriana}\\
+		\footnotesize Bogotá, Colombia\\
+		{\footnotesize cesarcanro@javeriana.edu.co}}
+	\hspace*{0.1 in}
+	\parbox{2.1 in}{\centering 3\textsuperscript{rd} Iván Santiago Lastra Romero\\
+		\footnotesize\textit{Departamento de Ingeniería de Sistemas}\\
+		\footnotesize\textit{Pontificia Universidad Javeriana}\\
+		Bogotá, Colombia\\
+		{\footnotesize ivan.lastra@javeriana.edu.co}}
+	\hspace*{0.1 in}
+	\\[0.2 in] % Salto vertical hacia la segunda fila
+	% --- Segunda fila (2 Autores centrados) ---
+	\parbox{2.2 in}{\centering 4\textsuperscript{th} Marlon Jhoan García Restrepo\\
+		\footnotesize\textit{Departamento de Ingeniería de Sistemas}\\
+		\footnotesize\textit{Pontificia Universidad Javeriana}\\
+		Bogotá, Colombia\\
+		{\footnotesize mjgarcia@javeriana.edu.co}}
+	\hspace*{0.2 in}
+	\parbox{2.0 in}{\centering 5\textsuperscript{th} Alejandro González Ochoa\\
+		\footnotesize\textit{Departamento de Ingeniería de Sistemas}\\
+		\footnotesize\textit{Pontificia Universidad Javeriana}\\
+		Bogotá, Colombia\\
+		{\footnotesize alejandrogonzalezo@javeriana.edu.co}}
+	\hspace*{0.2 in}
+}
 
 
 \begin{document}
@@ -71,10 +90,10 @@ En este documento se analiza un tópico desde diferentes ámbitos, con especial 
 
 Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente 
 \section{Contexto}
-    \subsection{Ámbito Pedagógico} 
+    \subsection{Ámbito Pedagógico}
     La retroalimentación es un elemento importante en el ámbito de la educación, ya que asegura que cada estudiante pueda tener un informe confiable y una opinión experta sobre su trabajo. Además, ayuda a los profesores a garantizar el aprendizaje de los estudiantes en cualquier área que lo requieran. Es por ello que es necesario el uso de la retroalimentación como una herramienta que facilite tanto el aprendizaje del estudiante como la enseñanza de los profesores. Sin embargo, esta herramienta puede tener un impacto tanto positivo como negativo según cómo se diseñe y entregue [1].
 
-    El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y persona. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje[6] a las cuales debe estar orientado. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada [7].
+    El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y persona. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje [6] a las cuales debe estar orientado. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada [7].
 
     Las pruebas y la evidencia señalan que la retroalimentación formativa alcanza su mayor efectividad en contextos de atención personalizada, como en tutorías uno a uno, donde el docente está permanentemente pendiente del proceso de cada estudiante []. A pesar de esto, este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. En estas condiciones, responder a la tercera pregunta resulta muy complicado, por lo que suele dejarse de lado y sacrificarse dentro del proceso de aprendizaje, quedando la falta de tiempo como una de las principales causas de la ausencia de retroalimentación. Esto deriva, en consecuencia, en la priorización de la calificación sobre el proceso formativo. 
     
@@ -84,9 +103,7 @@ Este análisis busca formular una solución que no solo responda al tópico plan
 
     Actualmente, en Colombia, uno de los principales problemas es la priorización de la nota o calificación sobre la propia retroalimentación [10]. Esto ocasiona que se omitan muchas de las fases que debería tener un proceso de retroalimentación formativa. Como consecuencia, la calificación se convierte en uno de los elementos prioritarios tanto para profesores como para estudiantes.
 
-    Cabe señalar, además, que la retroalimentación cumple su función únicamente cuando el estudiante actúa sobre ella y la regula, por lo que su propósito es desarrollar la autonomía del estudiante en su proceso de aprendizaje[11], sin dejar de lado la calificación y la apreciación del profesor, quien actúa como una guía durante dicho proceso. A partir de ello, surge la necesidad de Se configura así una brecha entre lo deseable y lo que las condiciones reales permiten sostener en especial entre una retroalimentación formativa, personalizada y centrada en la autonomía del estudiante, favoreciendo la continuidad de su proceso de aprendizaje. 
-    
-     
+    Cabe señalar, además, que la retroalimentación cumple su función únicamente cuando el estudiante actúa sobre ella y la regula, por lo que su propósito es desarrollar la autonomía del estudiante en su proceso de aprendizaje [11], sin dejar de lado la calificación y la apreciación del profesor, quien actúa como una guía durante dicho proceso. A partir de ello, surge la necesidad de Se configura así una brecha entre lo deseable y lo que las condiciones reales permiten sostener en especial entre una retroalimentación formativa, personalizada y centrada en la autonomía del estudiante, favoreciendo la continuidad de su proceso de aprendizaje. 
     \subsection{Ámbito Tecnológico} 
     Desde hace décadas se ha querido introducir la innovación tecnológica y el uso de estas en el ámbito educativo, enfocándose, en buena parte, en el desarrollo de sistemas orientados a evaluar entregables y generar retroalimentación de forma automática para aliviar la carga docente, crear procesos eficientes de aprendizaje y ofrecer una respuesta mucho más oportuna al estudiante [13]. Es por ello que la necesidad de sostener una retroalimentación de entregables a gran escala ha aumentado de forma sostenida en los últimos años, especialmente en el campo de la tecnología y la innovación en TI, dando lugar a distintas generaciones de herramientas de evaluación asistida. Sin embargo, actualmente no se presenta una herramienta sólida que pueda suplir esta necesidad de forma amplia.
 
@@ -127,7 +144,7 @@ Este análisis busca formular una solución que no solo responda al tópico plan
 
     Las herramientas de evaluación automática existentes no cierran esta brecha porque, si bien detectan errores, ofrecen un acompañamiento limitado para la mejora y pierden eficacia en trabajos abiertos y creativos, que son precisamente los de mayor valor formativo. Por otra parte, la inteligencia artificial generativa, aunque amplía las posibilidades de apoyo a la retroalimentación, introduce riesgos relacionados con sesgos, dependencia, tratamiento inadecuado de datos y costos de implementación que pueden acentuar las desigualdades existentes.
 
-    En consecuencia, el problema radica en la \textbf{ausencia de una forma de sostener una retroalimentación formativa de calidad a gran escala que preserve al docente como responsable de la decisión pedagógica y fortalezca la autonomía del estudiante, sin limitarse a automatizar la calificación.}
+    En consecuencia, el problema radica en la ausencia de una forma de sostener una retroalimentación formativa de calidad a gran escala que preserve al docente como responsable de la decisión pedagógica y fortalezca la autonomía del estudiante, sin limitarse a automatizar la calificación.
 
 
     \subsection{Encuestas}

@@ -1,16 +1,36 @@
-# LaTeX build artifacts (carpeta oculta usada por docs/.latexmkrc)
-docs/.latex/
-
-# Artefactos de compilación LaTeX (por si se compila en otro lado)
+# Archivos auxiliares de compilación de LaTeX
 *.aux
-*.log
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.out
-*.toc
 *.bbl
+*.bcf
 *.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
 *.nav
+*.out
+*.run.xml
 *.snm
+*.synctex.gz
+*.toc
 *.vrb
+
+# Archivos temporales de compilación en segundo plano y respaldos
+*.bak
+*.sav
+*.tmp
+*.te~
+*~
+
+# Archivos de configuración local de editores (TeXstudio / VS Code)
+.vscode/
+*.cwl
+*.user
