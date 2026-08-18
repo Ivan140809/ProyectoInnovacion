@@ -22,6 +22,7 @@
 *.synctex.gz
 *.toc
 *.vrb
+.latexmkrc
 
 # Archivos temporales de compilación en segundo plano y respaldos
 *.bak
