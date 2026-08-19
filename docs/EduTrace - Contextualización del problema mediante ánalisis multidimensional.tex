@@ -79,82 +79,96 @@ EduTrace - Contextualización del problema mediante análisis multidimensional
 \end{abstract}
 
 
-\section{Introducción}
+\section{Introducción} 
 
 Este documento analiza como la carencia de una retroalimentación formativa afecta profundamente el proceso de aprendizaje de estudiantes universitarios de cursos introductorios de programación y como una herramienta tecnológica como la IA puede ayudar a docentes a dar una retroalimentación de forma más eficiente sin descuidar la calidad de esta. 
 
 Para lograr un mejor análisis se tomaron en cuenta diferentes ámbitos en torno a dicha retroalimentación, pues para que la herramienta realmente funcione es necesario tener en cuenta todas las variables que la rodean. 
 
-%En este documento se analiza un tópico desde diferentes ámbitos, con especial énfasis en el contexto educativo, con el propósito de identificar los principales desafíos asociados a la integración de la inteligencia artificial en los procesos de evaluación y retroalimentación de los estudiantes.
+%En este documento se analiza un tópico desde diferentes ámbitos, con especial énfasis en el contexto educativo, con el propósito de identificar los principales desafíos asociados a la integración de la inteligencia artificial en los procesos de evaluación y retroalimentación de los estudiantes. 
 
-%Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente
-
-\section{Contexto}
-    \subsection{Ámbito Pedagógico} 
-    La retroalimentación constituye uno de los factores de mayor impacto en el ámbito de la educación y el aprendizaje, ya que asegura que cada estudiante pueda tener un informe confiable y una opinión experta sobre su trabajo. Además, ayuda a los profesores a garantizar el aprendizaje de los estudiantes en cualquier área que lo requieran. Es por ello que es necesario el uso de la retroalimentación como una herramienta que facilite tanto el aprendizaje del estudiante como la enseñanza de los profesores. Sin embargo, esta herramienta puede tener un impacto tanto positivo como negativo según cómo se diseñe y entregue [1].
-
-    El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y persona. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje [6] a las cuales debe estar orientado. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada [6][7].
-
-    Las pruebas y la evidencia señalan que la retroalimentación formativa alcanza su mayor efectividad en contextos de atención cercana y orientada según el criterio del profesor, como en tutorías uno a uno, donde el docente está permanentemente pendiente del proceso de cada estudiante [11].
-
-    Partiendo de esta base, se establece que la etapa del ¿Qué sigue? en la retroalimentación es aquella en la que la educación presenta mayores dificultades al momento de guiar al estudiante en sus trabajos y proyectos, en especial durante la retroalimentación de tareas, proyectos o algún otro elemento calificable, ya que este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. Por ello, esta última etapa es la que más se suele sacrificar en los procesos de aprendizaje y, por lo tanto, el proceso se repliega hacia la calificación.
-
-    Esta debilidad es especialmente crítica en los cursos introductorios de programación, donde hasta un tercio de los estudiantes reprueba el primer curso de programación a nivel mundial, en un área donde la retroalimentación oportuna es más necesaria [19]. En el contexto local de Colombia, y en específico de la Pontificia Universidad Javeriana, se aplicó una encuesta propia a 50 estudiantes de introducción a la programación [Anexo A], la cual evidenció que el 67\% de la población percibió el curso con una dificultad media-alta y que el 66\% consideró que esas dificultades eran comunes o muy comunes entre sus compañeros, mostrando un problema generalizado en el entorno que se quiere analizar. Además, el 72\% reconoció la retroalimentación como útil para mejorar su código, mostrando una demanda real de acompañamiento formativo que las condiciones actuales no alcanzan a satisfacer, lo que evidencia una brecha entre la retroalimentación que la enseñanza de la programación requiere y la que las condiciones reales permiten sostener.
-
-    Con ello, cabe aclarar que la dificultad de retroalimentar en programación tiene varias raíces: un mismo problema puede admitir muchas soluciones válidas, y un programa puede funcionar correctamente y aun así estar mal estructurado, ser poco legible o carecer de documentación. Evaluar estos aspectos exige un criterio experto que va más allá de verificar si el código funciona, lo que hace que la retroalimentación de calidad sea, en este dominio, más costosa en tiempo y más dependiente del juicio del docente.
-    
-    \subsection{Ámbito Tecnológico} 
-    Desde hace décadas se ha querido introducir la innovación tecnológica y el uso de estas en el ámbito educativo, enfocándose, en buena parte, en el desarrollo de sistemas orientados a evaluar entregables y generar retroalimentación de forma automática para aliviar la carga docente, crear procesos eficientes de aprendizaje y ofrecer una respuesta mucho más oportuna al estudiante [13]. Es por ello que la necesidad de sostener una retroalimentación de entregables a gran escala ha aumentado de forma sostenida en los últimos años, especialmente en el campo de la tecnología y la innovación en TI, dando lugar a distintas generaciones de herramientas de evaluación asistida. Sin embargo, actualmente no se presenta una herramienta sólida que pueda suplir esta necesidad de forma amplia.
-
-    La evidencia sistemática indica que las herramientas de retroalimentación son eficaces, sobre todo, para la identificación de errores y la verificación de la corrección del trabajo, pero ofrecen un acompañamiento mucho menor sobre cómo corregir un trabajo y acompañar al estudiante después de esa corrección [14]. De hecho, una revisión de 121 estudios confirma que las herramientas automáticas se concentran en verificar la corrección del código y carecen de un enfoque pedagógico para acompañar la legibilidad, la mantenibilidad y la documentación del software [15]. Aunque permiten responder con relativa solvencia a las dos primeras preguntas del proceso formativo, presentan mayores dificultades para abordar la tercera pregunta, relacionada con el seguimiento del estudiante. Esta limitación ha sido una de las más difíciles de superar con la tecnología desarrollada hasta el momento. A esta restricción se suma que los docentes a menudo no pueden adaptar estas herramientas a las particularidades de su curso o de su criterio, ya sea por su complejidad u otros motivos.
-
-    Otra restricción presente en el ámbito tecnológico es que la evaluación automatizada de los diferentes entregables y la retroalimentación funcionan bien con evaluaciones estructuradas y de respuesta previsible; sin embargo, pierden eficacia ante trabajos altamente creativos que involucran estructuras o desarrollos diferentes entre un estudiante y otro [15]. En este tipo de entregables, los estudiantes desarrollan el problema de formas alternativas y no existe una única solución con la cual comparar el resultado. Precisamente, este tipo de trabajos, que requieren una mayor retroalimentación y poseen un mayor valor formativo, son aquellos en los que la tecnología presenta mayores limitaciones.
-
-    Con este panorama, la llegada de herramientas tecnologicas y de los modelos de lenguaje a gran escala introduce un cambio relevante, pues estas herramientas tecnológicas han facilitado una retroalimentación más elaborada, contextual y más cercana al lenguaje humano que las herramientas previas [16]. La evidencia sugiere que, dentro de unos parámetros establecidos y con criterios de evaluación claros, estos modelos pueden aproximarse a la calidad de un evaluador humano [16]. Sin embargo, estas herramientas aún siguen condicionadas al diseño de las tareas y a los criterios que se les proporcionen. Además, las investigaciones actuales han prestado poca atención a cómo se integra el criterio del docente en este proceso, lo que replantea el rol del humano en la evaluación mediada e integrada por la IA.
-
-    La evidencia reciente en cursos introductorios de programación muestra que una herramienta tecnologica alcanzó un 86\% de exactitud frente a la calificación humana en más de 6.000 entregas analizadas [20]. Sin embargo, la concordancia con el criterio real del docente es solo moderada, por lo que la investigación converge especialmente en  modelos human-in-the-loop, en los que la herramienta asiste pero el criterio final permanece humano y cercano a el profesor [21].
-
-    A partir de ello, se establece que estas herramientas pueden ser muy beneficiosas al momento de utilizarlas. Sin embargo, también presentan riesgos relacionados con la confiabilidad y la consistencia de sus resultados, así como con la posibilidad de reproducir sesgos presentes en sus datos y con la necesidad de asegurar que la retroalimentación generada impulse efectivamente el aprendizaje y no se limite únicamente a entregar un resultado [17]. En este sentido, la literatura coincide en que la tecnología actual no permite excluir el rol del docente en los procesos de calificación y retroalimentación de trabajos. Esta brecha entre las capacidades tecnológicas actuales y la necesidad de una retroalimentación formativa de calidad evidencia la importancia de desarrollar herramientas que integren la participación del docente sin renunciar a las ventajas que ofrece la inteligencia artificial.
-
-    \subsection{Ámbito Ético-Legal} 
-    Actualmente, el uso de la inteligencia artificial en los procesos de evaluación académica plantea desafíos éticos relacionados con la imparcialidad, la transparencia y la protección de los derechos de los estudiantes. Aunque estas herramientas permiten procesar grandes volúmenes de información y generar retroalimentaciones de manera eficiente, también pueden producir resultados inconsistentes, reproducir sesgos presentes en sus datos de entrenamiento o evaluar de manera inadecuada trabajos creativos y soluciones diferentes a las esperadas [12]. Por ello, los marcos éticos internacionales coinciden en que la utilización de la inteligencia artificial dentro de la educación debe mantener una supervisión humana significativa durante los procesos de evaluación y toma de decisiones, preservando un enfoque centrado en las personas y en el aprendizaje [5].
-
-    Además de los desafíos relacionados con la imparcialidad, el uso de estas herramientas tecnologicas actuales debe considerar la protección de los datos personales de los estudiantes. La Circular Externa 002 del 21 de agosto de 2024, expedida por la Superintendencia de Industria y Comercio, la cual establece lineamientos para el tratamiento de datos personales mediante sistemas de inteligencia artificial [3]. Estos lineamientos complementan las disposiciones establecidas por la Ley 1581 de 2012, la cual regula el tratamiento y la protección de los datos personales en Colombia [4]. De igual manera, los principios internacionales sobre el uso responsable de la inteligencia artificial en la educación destacan la necesidad de garantizar la privacidad de los estudiantes y asegurar que el tratamiento de su información responda a principios de legalidad, transparencia y responsabilidad [18].
-
-    Así mismo, el uso de la inteligencia artificial dentro de los procesos educativos debe desarrollarse bajo principios de transparencia y respeto por la autonomía de los estudiantes. En este contexto, los estudiantes deben conocer cuándo una herramienta basada en inteligencia artificial participa en un proceso de evaluación, comprender la finalidad con la que se procesan sus datos y contar con mecanismos que garanticen una supervisión humana significativa sobre las decisiones que puedan afectar su proceso formativo [18]. Del mismo modo, la literatura advierte que una dependencia excesiva de estas herramientas puede disminuir la participación activa del estudiante y afectar el desarrollo de procesos de autorregulación y autonomía durante el aprendizaje [19], por lo que su utilización debe orientarse a fortalecer estos procesos y no a sustituirlos sobre todo en ambitos tecnologicos y orientados hacia docentes.
-
-    \subsection{Ámbito Socio-Cultural}
-    Delegar excesivamente la evaluación en herramientas de inteligencia artificial podría afectar la relación entre el docente y el estudiante. La retroalimentación académica no consiste únicamente en señalar errores, sino también en reconocer el esfuerzo, comprender el proceso de aprendizaje y orientar al estudiante según sus necesidades particulares. En este sentido, la literatura reconoce la retroalimentación como un proceso relacional y social, en el que la interacción entre docente y estudiante constituye un elemento fundamental para el aprendizaje [20]. Una respuesta generada automáticamente puede resultar impersonal o no considerar las circunstancias sociales, emocionales y académicas que influyen en el desempeño de cada persona. Por ello, distintos enfoques pedagógicos destacan la importancia de preservar el acompañamiento humano dentro de los procesos educativos [18].
-
-    Adicionalmente, en Colombia y otros países de América Latina, la incorporación de tecnologías basadas en inteligencia artificial enfrenta desafíos relacionados con la brecha digital y las desigualdades en el acceso y uso significativo de estas herramientas [11]. Estas diferencias no solo dependen de la disponibilidad de infraestructura tecnológica, sino también de las competencias digitales de docentes y estudiantes, así como de las condiciones sociales, económicas y territoriales que influyen en su adopción. En este contexto, la implementación de la inteligencia artificial en la educación debe analizarse desde principios de equidad e inclusión, procurando que la tecnología contribuya al mejoramiento de los procesos educativos sin ampliar las desigualdades existentes [21].
-
-    Asimismo, el uso de estas herramientas requiere fortalecer la alfabetización digital tanto de docentes como de estudiantes, permitiéndoles comprender su funcionamiento, sus posibilidades y sus limitaciones [22]. La evidencia señala que el aprovechamiento de la inteligencia artificial depende de la capacidad de utilizarla de manera crítica y responsable dentro de los procesos educativos orientado para el docente y los estudiantes de una forma apropiada de revisar, aprobar y formar a los mejores profesionales.
-
-    \subsection{Ámbito Económico} 
-    La incorporación de herramientas de inteligencia artificial en los procesos de evaluación académica implica una serie de desafíos económicos relacionados con su adopción, implementación y mantenimiento dentro de las instituciones educativas. Aunque estas tecnologías podrían contribuir a reducir la carga asociada a la evaluación, su implementación requiere inversiones en infraestructura tecnológica, recursos computacionales, integración con los sistemas institucionales y capacitación de los usuarios, factores que condicionan su viabilidad, especialmente en instituciones con recursos limitados [23].
-
-    Entre los principales costos asociados se encuentran la disponibilidad de modelos de inteligencia artificial con un nivel adecuado de desempeño, la integración con plataformas educativas existentes, el mantenimiento de la infraestructura tecnológica y la adaptación de los procesos institucionales para incorporar este tipo de herramientas. Asimismo, deben considerarse los costos derivados de la actualización permanente de los modelos, el almacenamiento y procesamiento de la información, así como la supervisión necesaria para garantizar un funcionamiento confiable y alineado con los objetivos educativos.
-
-    En este contexto, la adopción de tecnologías basadas en inteligencia artificial dentro de los procesos educativos depende de que los beneficios obtenidos justifiquen los costos de implementación y operación [24]. Por esta razón, la viabilidad de estas herramientas debe analizarse considerando factores como la disponibilidad de recursos, la capacidad tecnológica existente y la sostenibilidad de su implementación a largo plazo. Estos costos, además, pueden acentuar las desigualdades de acceso y adopción tecnológica señaladas en el ámbito sociocultural.
+%Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente 
 
 
-    \subsection{Formulación del problema}
-    Teniendo en cuenta el contexto analizado, en la educación superior persiste una brecha entre las características que la literatura reconoce como una retroalimentación de calidad y la capacidad de implementarlas de manera sostenida en contextos con una alta cantidad de estudiantes y entregables. La retroalimentación de calidad se orienta a construir la autonomía del estudiante mediante un enfoque personalizado y centrado en el ¿Qué sigue? del proceso formativo.
+\section{Contexto} 
 
-    En un contexto donde existe una alta cantidad de entregables y un número considerable de estudiantes, producir este tipo de retroalimentación exige una inversión de tiempo muy alta por parte del docente, por lo que la última etapa suele sacrificarse, a pesar de ser la que garantiza el aprendizaje continuo de los estudiantes y fortalece el cumplimiento de su rol formativo. Como consecuencia, se termina priorizando la calificación por encima del aprendizaje.
+\subsection{Ámbito Pedagógico}  
 
-    Las herramientas de evaluación automática existentes no cierran esta brecha porque, si bien detectan errores, ofrecen un acompañamiento limitado para la mejora y pierden eficacia en trabajos abiertos y creativos, que son precisamente los de mayor valor formativo. Por otra parte, la inteligencia artificial generativa, aunque amplía las posibilidades de apoyo a la retroalimentación, introduce riesgos relacionados con sesgos, dependencia, tratamiento inadecuado de datos y costos de implementación que pueden acentuar las desigualdades existentes.
+La retroalimentación constituye uno de los factores de mayor impacto en el ámbito de la educación y el aprendizaje, ya que asegura que cada estudiante pueda tener un informe confiable y una opinión experta sobre su trabajo. Además, ayuda a los profesores a garantizar el aprendizaje de los estudiantes en cualquier área que lo requieran. Es por ello que es necesario el uso de la retroalimentación como una herramienta que facilite tanto el aprendizaje del estudiante como la enseñanza de los profesores. Sin embargo, esta herramienta puede tener un impacto tanto positivo como negativo según cómo se diseñe y entregue \cite{1}. 
 
-    En consecuencia, el problema radica en la ausencia de una forma de sostener una retroalimentación formativa de calidad a gran escala que preserve al docente como responsable de la decisión pedagógica y fortalezca la autonomía del estudiante, sin limitarse a automatizar la calificación.
+El marco de referencia mundial establece que una retroalimentación efectiva debe responder a tres preguntas principales y encadenadas: ¿Hacia dónde voy?, ¿Cómo voy? y ¿Qué sigue?, operando en cuatro niveles que incluyen tarea, proceso, autorregulación y el individuo. Este último es el nivel más débil, pues no atiende a las metas de aprendizaje a las cuales debe estar orientado, muchas veces por falta de claridad de estas \cite{6}. Esta tradición se apoya en la evaluación formativa, entendida como una intervención integrada en el proceso de aprendizaje para cerrar la brecha entre el desempeño y la meta deseada \cite{6}\cite{7}. 
+
+Las pruebas y la evidencia señalan que la retroalimentación formativa alcanza su mayor efectividad en contextos de atención cercana y orientada según el criterio del profesor, como en tutorías uno a uno, donde el docente está permanentemente pendiente del proceso de cada estudiante \cite{11}. 
+
+Partiendo de esta base, se establece que la etapa del ¿Qué sigue? en la retroalimentación es aquella en la que la educación presenta mayores dificultades al momento de guiar al estudiante en sus trabajos, en especial durante la retroalimentación de tareas, proyectos o algún otro elemento calificable, ya que este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. Por ello, esta última etapa es la que más se suele sacrificar en los procesos de aprendizaje y, por lo tanto, el proceso se repliega hacia la calificación. 
+
+Esta debilidad es especialmente crítica en los cursos introductorios de programación, donde hasta un tercio de los estudiantes reprueba el primer curso de programación a nivel mundial, en un área donde la retroalimentación oportuna es más necesaria \cite{32}. Una muestra de la gravedad de esta debilidad es el hecho de que más del 40\% de los estudiantes usa IA generativa para resolver tareas y laboratorios de programación, generando así una sobre dependencia en la herramienta \cite{29}, muchas veces la dependencia a la herramienta es generada por la aparente dificultad de la tarea o trabajo propuesto junto con falta de autonomía por parte del estudiante a la hora de hacer trabajo fuera del aula de clases. En el contexto local de Colombia, y en específico de la sede de Bogotá de la Pontificia Universidad Javeriana, se realizó una encuesta propia a 50 estudiantes de introducción a la programación, la cual evidenció que el 67\% de los encuestados percibió el curso con una dificultad media-alta y que el 66\% consideró que esas dificultades eran comunes o muy comunes entre sus compañeros, mostrando un problema generalizado en el entorno que se quiere analizar [Anexo A]. Además, el 72\% reconoció la retroalimentación como útil para mejorar su código [Anexo A], mostrando una demanda real de acompañamiento formativo que las condiciones actuales no alcanzan a satisfacer, lo que evidencia una brecha entre la retroalimentación que la enseñanza de la programación requiere y la que las condiciones reales permiten sostener. 
+
+Con ello, cabe aclarar que la dificultad de retroalimentar en programación tiene varias raíces: un mismo problema puede admitir muchas soluciones válidas, y un programa puede funcionar correctamente y aun así estar mal estructurado, ser poco legible o carecer de documentación. Evaluar estos aspectos exige un criterio experto que va más allá de verificar si el código funciona, lo que hace que la retroalimentación de calidad sea, en este dominio, más costosa en tiempo y más dependiente del juicio del docente. 
 
 
-    \subsection{Encuestas}
-    
+\subsection{Ámbito Tecnológico}  
+
+Desde hace décadas se ha querido introducir la innovación tecnológica y el uso de estas en el ámbito educativo, enfocándose, en buena parte, en el desarrollo de sistemas orientados a evaluar entregables y generar retroalimentación de forma automática para aliviar la carga docente, crear procesos eficientes de aprendizaje y ofrecer una respuesta mucho más oportuna al estudiante \cite{13}. Es por ello que la necesidad de sostener una retroalimentación de entregables a gran escala ha aumentado de forma sostenida en los últimos años, especialmente en el campo de la tecnología y la innovación en TI, dando lugar a distintas generaciones de herramientas de evaluación asistida. Sin embargo, actualmente no se presenta una herramienta sólida que pueda suplir esta necesidad de forma amplia. 
+
+La evidencia sistemática indica que las herramientas de retroalimentación son eficaces, sobre todo, para la identificación de errores y la verificación de la corrección del trabajo, pero ofrecen un acompañamiento mucho menor sobre cómo corregir un trabajo y acompañar al estudiante después de esa corrección \cite{14}. De hecho, una revisión de 121 estudios confirma que las herramientas automáticas se concentran en verificar la corrección del código y carecen de un enfoque pedagógico para acompañar la legibilidad, la mantenibilidad y la documentación del software \cite{15}. Aunque permiten responder con relativa solvencia a las dos primeras preguntas del proceso formativo, presentan mayores dificultades para abordar la tercera pregunta, relacionada con el seguimiento del estudiante. Esta limitación ha sido una de las más difíciles de superar con la tecnología desarrollada hasta el momento. A esta restricción se suma que los docentes a menudo no pueden adaptar estas herramientas a las particularidades de su curso o de su criterio, ya sea por su complejidad u otros motivos. 
+
+Otra restricción presente en el ámbito tecnológico es que la evaluación automatizada de los diferentes entregables y la retroalimentación funcionan bien con evaluaciones estructuradas y de respuesta previsible; sin embargo, pierden eficacia ante trabajos altamente creativos que involucran estructuras o desarrollos diferentes entre un estudiante y otro \cite{15}. En este tipo de entregables, los estudiantes desarrollan el problema de formas alternativas y no existe una única solución con la cual comparar el resultado. Precisamente, este tipo de trabajos, que requieren una mayor retroalimentación y poseen un mayor valor formativo, son aquellos en los que la tecnología presenta mayores limitaciones. 
+
+Con este panorama, la llegada de herramientas tecnológicas y de los modelos de lenguaje a gran escala introduce un cambio relevante, pues estas herramientas tecnológicas han facilitado una retroalimentación más elaborada, contextual y más cercana al lenguaje humano que las herramientas previas \cite{16}. La evidencia sugiere que, dentro de unos parámetros establecidos y con criterios de evaluación claros, estos modelos pueden aproximarse a la calidad de un evaluador humano \cite{16}. Sin embargo, estas herramientas aún siguen condicionadas al diseño de las tareas y a los criterios que se les proporcionen. Además, las investigaciones actuales han prestado poca atención a cómo se integra el criterio del docente en este proceso, lo que replantea el rol del humano en la evaluación mediada e integrada por la IA. 
+
+La evidencia reciente en cursos introductorios de programación muestra que una herramienta tecnológica alcanzó un 86\% de exactitud frente a la calificación humana en más de 6.000 entregas analizadas \cite{30}. Sin embargo, la concordancia con el criterio real del docente es solo moderada, por lo que la investigación converge especialmente en modelos human-in-the-loop, en los que la herramienta asiste pero el criterio final permanece humano y cercano a el profesor \cite{12}\cite{28}. 
+
+A partir de ello, se establece que estas herramientas pueden ser muy beneficiosas al momento de utilizarlas. Sin embargo, también presentan riesgos relacionados con la confiabilidad y la consistencia de sus resultados, así como la posibilidad de reproducir sesgos presentes en sus datos y con la necesidad de asegurar que la retroalimentación generada impulse efectivamente el aprendizaje y no se limite únicamente a entregar un resultado \cite{17}. En este sentido, la literatura coincide en que la tecnología actual no permite excluir el rol del docente en los procesos de calificación y retroalimentación de trabajos. Esta brecha entre las capacidades tecnológicas actuales y la necesidad de una retroalimentación formativa de calidad evidencia la importancia de desarrollar herramientas que integren la participación del docente sin renunciar a las ventajas que ofrece la inteligencia artificial. 
 
 
-    
-    \subsection{Pregunta del problema}
-    Teniendo en cuenta la formulacion del problema ya definido se establece 
+\subsection{Ámbito Ético-Legal}  
+
+Actualmente, el uso de la inteligencia artificial en los procesos de evaluación académica plantea desafíos éticos relacionados con la imparcialidad, la transparencia y la protección de los derechos de los estudiantes. Aunque estas herramientas permiten procesar grandes volúmenes de información y generar retroalimentaciones de manera eficiente, también pueden producir resultados inconsistentes, reproducir sesgos presentes en sus datos de entrenamiento o evaluar de manera inadecuada trabajos creativos y soluciones diferentes a las esperadas \cite{12}. Por ello, los marcos éticos internacionales coinciden en que la utilización de la inteligencia artificial dentro de la educación debe mantener una supervisión humana significativa durante los procesos de evaluación y toma de decisiones, preservando un enfoque centrado en las personas y en el aprendizaje \cite{5}. 
+
+Además de los desafíos relacionados con la imparcialidad, el uso de estas herramientas tecnológicas actuales debe considerar la protección de los datos personales de los estudiantes. La Circular Externa 002 del 21 de agosto de 2024, expedida por la Superintendencia de Industria y Comercio, establece lineamientos para el tratamiento de datos personales mediante sistemas de inteligencia artificial como lo es el hecho de que los datos no son de naturaleza publica a pesar de que estén en internet \cite{3}. Estos lineamientos complementan las disposiciones establecidas por la Ley 1581 de 2012 (idoneidad, necesidad, razonabilidad, y proporcionalidad), la cual regula el tratamiento y la protección de los datos personales en Colombia \cite{4}. De igual manera, los principios internacionales sobre el uso responsable de la inteligencia artificial en la educación destacan la necesidad de garantizar la privacidad de los estudiantes y asegurar que el tratamiento de su información responda a principios de legalidad, transparencia y responsabilidad \cite{18}. 
+
+Así mismo, el uso de la inteligencia artificial dentro de los procesos educativos debe desarrollarse bajo principios de transparencia y respeto por la autonomía de los estudiantes. En este contexto, los estudiantes deben conocer cuándo una herramienta basada en inteligencia artificial participa en un proceso de evaluación, comprender la finalidad con la que se procesan sus datos y contar con mecanismos que garanticen una supervisión humana significativa sobre las decisiones que puedan afectar su proceso formativo \cite{18}. Del mismo modo, la literatura advierte que una dependencia excesiva de estas herramientas puede disminuir la participación activa del estudiante y afectar el desarrollo de procesos de autorregulación y autonomía durante el aprendizaje \cite{19}, por lo que su utilización debe orientarse a fortalecer estos procesos y no a sustituirlos sobre todo en ámbitos tecnológicos y orientados hacia docentes.
+
+En el contexto colombiano, la dependencia excesiva de estas herramientas por parte de los estudiantes de programación puede implicarle 	graves problemas en su trayectoria académica y profesional. Dado que la Ley 23 de 1982 exige una creación de origen humano para conceder protección de derechos de autor \cite{24}, el código generado de manera automatizada por sistemas de inteligencia artificial carece de dicha titularidad. Esto no solo impide que el estudiante blinde legalmente su propio desarrollo, sino que lo expone a vacíos normativos sobre la originalidad de sus entregas y a posibles sanciones institucionales por falta de autoría legítima.  
+
+
+\subsection{Ámbito Socio-Cultural} 
+
+Delegar excesivamente la evaluación en herramientas de inteligencia artificial podría afectar la relación entre el docente y el estudiante. La retroalimentación académica no consiste únicamente en señalar errores, sino también en reconocer el esfuerzo, comprender el proceso de aprendizaje y orientar al estudiante según sus necesidades particulares. En este sentido, la literatura reconoce la retroalimentación como un proceso relacional y social, en el que la interacción entre docente y estudiante constituye un elemento fundamental para el aprendizaje \cite{6}. Una respuesta generada automáticamente puede resultar impersonal o no considerar las circunstancias sociales, emocionales y académicas que influyen en el desempeño de cada persona. Por ello, distintos enfoques pedagógicos destacan la importancia de preservar el acompañamiento humano dentro de los procesos educativos \cite{18}. 
+
+Adicionalmente, un estudio en España declara que la programación es una competencia digital minoritaria fuertemente condicionada por el nivel socioeconómico \cite{24}, hecho que se refuerza más en el contexto latinoamericano. En Colombia y otros países de América Latina, la incorporación de tecnologías basadas en inteligencia artificial enfrenta desafíos relacionados con la brecha digital y las desigualdades en el acceso y uso significativo de estas herramientas \cite{21}. Estas diferencias no solo dependen de la disponibilidad de infraestructura tecnológica, sino también de las competencias digitales de docentes y estudiantes, así como de las condiciones sociales, económicas y territoriales que influyen en su adopción. En este contexto, la implementación de la inteligencia artificial en la educación debe analizarse desde principios de equidad e inclusión, procurando que la tecnología contribuya al mejoramiento de los procesos educativos sin ampliar las desigualdades existentes \cite{20}.
+
+Asimismo, el uso de estas herramientas requiere fortalecer la alfabetización digital tanto de docentes como de estudiantes, permitiéndoles comprender su funcionamiento, sus posibilidades y sus limitaciones \cite{21}. La evidencia señala que el aprovechamiento de la inteligencia artificial depende de la capacidad de utilizarla de manera crítica y responsable dentro de los procesos educativos orientado para el docente y los estudiantes de una forma apropiada de revisar, aprobar y formar a los mejores profesionales. 
+
+
+\subsection{Ámbito Económico}  
+
+La incorporación de herramientas de inteligencia artificial en los procesos de evaluación académica implica una serie de desafíos económicos relacionados con su adopción, implementación y mantenimiento dentro de las instituciones educativas. Aunque estas tecnologías podrían contribuir a reducir la carga asociada a la evaluación, su implementación requiere inversiones en infraestructura tecnológica, recursos computacionales, integración con los sistemas institucionales y capacitación de los usuarios, factores que condicionan su viabilidad, especialmente en instituciones con recursos limitados \cite{22}. 
+
+Entre los principales costos asociados se encuentran la disponibilidad de modelos de inteligencia artificial con un nivel adecuado de desempeño, la integración con plataformas educativas existentes, el mantenimiento de la infraestructura tecnológica y la adaptación de los procesos institucionales para incorporar este tipo de herramientas. Asimismo, deben considerarse los costos derivados de la actualización permanente de los modelos, el almacenamiento y procesamiento de la información, así como la supervisión necesaria para garantizar un funcionamiento confiable y alineado con los objetivos educativos. 
+
+En este contexto, la adopción de tecnologías basadas en inteligencia artificial dentro de los procesos educativos depende de que los beneficios obtenidos justifiquen los costos de implementación y operación \cite{23}. Por esta razón, la viabilidad de estas herramientas debe analizarse considerando factores como la disponibilidad de recursos, la capacidad tecnológica existente y la sostenibilidad de su implementación a largo plazo. Estos costos, además, pueden acentuar las desigualdades de acceso y adopción tecnológica señaladas en el ámbito sociocultural. 
+
+
+\subsection{Formulación del problema} 
+
+Teniendo en cuenta el contexto analizado, es evidente que en la educación superior persiste una brecha entre las características que la literatura reconoce como una retroalimentación de calidad y la capacidad de implementarlas de manera sostenida en contextos con una alta cantidad de estudiantes y entregables. La retroalimentación de calidad se orienta a construir la autonomía del estudiante mediante un enfoque personalizado y centrado en el ¿Qué sigue? del proceso formativo. 
+
+En un contexto donde existe una alta cantidad de entregables y un número considerable de estudiantes, producir este tipo de retroalimentación exige una inversión de tiempo muy alta por parte del docente, por lo que la última etapa suele sacrificarse, a pesar de ser la que garantiza el aprendizaje continuo de los estudiantes y fortalece el cumplimiento de su rol formativo. Como consecuencia, se termina priorizando la calificación por encima del aprendizaje. 
+
+Las herramientas de evaluación automática existentes no cierran esta brecha porque, si bien detectan errores, ofrecen un acompañamiento limitado para la mejora y pierden eficacia en trabajos abiertos y creativos, que son precisamente los de mayor valor formativo. Por otra parte, la inteligencia artificial generativa, aunque amplía las posibilidades de apoyo a la retroalimentación, introduce riesgos relacionados con sesgos, dependencia, tratamiento inadecuado de datos y costos de implementación que pueden acentuar las desigualdades existentes. 
+
+En consecuencia, el problema radica en la ausencia de una forma de sostener una retroalimentación formativa de calidad a gran escala que preserve al docente como responsable de la decisión pedagógica y fortalezca la autonomía del estudiante, sin limitarse a automatizar la calificación. 
+
+
+\subsection{Encuestas} 
+
+
+
+\subsection{Pregunta del problema} 
+
+Después del análisis realizado se plantea la siguiente pregunta problema como guía para buscar una solución a este problema: ¿Cómo, a través de las TI, sostener una retroalimentación formativa efectiva en cursos introductorios de programación, que preserve al docente como decisor apoyando su labor, sin limitarse a automatizar la calificación?
 
     
 
@@ -181,7 +195,7 @@ Para lograr un mejor análisis se tomaron en cuenta diferentes ámbitos en torno
 
 \bibitem{1} Hattie, J., \& Timperley, H. (2007). The Power of Feedback. Review of Educational Research, 77(1), 81-112.
 
-\bibitem{2} Carless, D., \& Boud, D. (2018). The development of student feedback literacy: enabling uptake of feedback. Assessment \& Evaluation in Higher Education, 43(8), 1315–1325
+%\bibitem{2} Carless, D., \& Boud, D. (2018). The development of student feedback literacy: enabling uptake of feedback. Assessment \& Evaluation in Higher Education, 43(8), 1315–1325
 
 \bibitem{3} Superintendencia de Industria y Comercio, “Circular Externa No. 002 del 21 de agosto de 2024: Lineamientos sobre el tratamiento de datos personales en sistemas de inteligencia artificial”, Bogotá, Colombia, 2024.
 
@@ -193,13 +207,13 @@ Para lograr un mejor análisis se tomaron en cuenta diferentes ámbitos en torno
 
 \bibitem{7} Black, P., \& Wiliam, D. (2010). Inside the Black Box: Raising Standards through Classroom Assessment. Phi Delta Kappan, 92(1), 81-90.
 
-\bibitem{8} GADE: Revista Científica, ISSN-e 2745-2891, Vol. 6, Nº. 1, 2026 (Ejemplar dedicado a: Education Without Borders), págs. 95-116
+%\bibitem{8} GADE: Revista Científica, ISSN-e 2745-2891, Vol. 6, Nº. 1, 2026 (Ejemplar dedicado a: Education Without Borders), págs. 95-116
 
-\bibitem{9}  Malouff, J. M., \& Thorsteinsson, E. B. (2016). Bias in grading: A meta-analysis of experimental research findings. Australian Journal of Education, 60(3), 245-256.
+%\bibitem{9}  Malouff, J. M., \& Thorsteinsson, E. B. (2016). Bias in grading: A meta-analysis of experimental research findings. Australian Journal of Education, 60(3), 245-256.
 
-\bibitem{10} Butler, R. (1987). Task-involving and ego-involving properties of evaluation: Effects of different feedback conditions on motivational perceptions, interest, and performance. Journal of Educational Psychology, 79(4), 474–48
+%\bibitem{10} Butler, R. (1987). Task-involving and ego-involving properties of evaluation: Effects of different feedback conditions on motivational perceptions, interest, and performance. Journal of Educational Psychology, 79(4), 474–48
 
-\bibitem{11} Nicol, D., \& Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje autorregulado: un modelo y siete principios de buenas prácticas de retroalimentación. Studies in Higher Education, 31, 199-218
+\bibitem{11} Nicol, D. J., \& Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. Studies in Higher Education, 31(2), 199-218.
 
 \bibitem{12} Shubha, S., Gopala Krishna Murthy, H. R., \& Shubhakar, S. (2026). AI-based automated grading and feedback systems: Technologies, challenges and future directions in higher education. International Journal of Research and Innovation in Applied Science, 11(2), 267–279
 
@@ -217,35 +231,55 @@ Para lograr un mejor análisis se tomaron en cuenta diferentes ámbitos en torno
 
 \bibitem{19} E. F. Risko and S. J. Gilbert, "Cognitive offloading," Trends Cogn. Sci., vol. 20, no. 9, pp. 676-688, Sep. 2016. doi: 10.1016/j.tics.2016.07.002.
 
-\bibitem{20} Nicol, D. J., \& Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. Studies in Higher Education, 31(2), 199-218.
+% LA REFERENCIA 20 ERA LA MISMA 11 PERO EN SU IDIOMA ORIGINAL
 
-\bibitem{21} Ministerio de Educación Nacional. (2024, 5 de diciembre). Equidad e inclusión: retos de la inteligencia artificial en los sistemas educativos del mundo [Comunicado de prensa].
+\bibitem{20} Ministerio de Educación Nacional. (2024, 5 de diciembre). Equidad e inclusión: retos de la inteligencia artificial en los sistemas educativos del mundo [Comunicado de prensa].
 
-\bibitem{22} Inteligencia artificial y brecha digital en la educación superior: revisión internacional con foco en Colombia. (2026). GADE: Revista Científica.
+\bibitem{21} Inteligencia artificial y brecha digital en la educación superior: revisión internacional con foco en Colombia. (2026). GADE: Revista Científica.
 
-\bibitem{23} Artificial Intelligence and Cost Reduction in Public Higher Education: A Scoping Review of Emerging Evidence (2026). arXiv:2604.04741. 
+\bibitem{22} Artificial Intelligence and Cost Reduction in Public Higher Education: A Scoping Review of Emerging Evidence (2026). arXiv:2604.04741. 
 
 
 %--- Referencias añadidas de la presentación ---%
-\bibitem{24} Centro Reina Sofía de Fad Juventud, “Jóvenes y desigualdad digital: Brechas de acceso, competencias y uso,” Madrid, España, 2024.
+\bibitem{23} D. Calderón Gómez, “Jóvenes y desigualdad digital: Las brechas de acceso, competencias y uso,” Centro Reina Sofía de Fad Juventud, 2020. [En línea]. Disponible: https://www.centroreinasofia.org/blog/analisis-y-debate/jovenes-y-desigualdad-digital-las-brechas-de-access-competencias-y-uso/
 
-\bibitem{25} Congreso de la República de Colombia, “Ley 23 de 1982, sobre derechos de autor,” Diario Oficial, Bogotá, Colombia, 28 de enero de 1982.
+\bibitem{24} Congreso de la República de Colombia, “Ley 23 de 1982, sobre derechos de autor,” Diario Oficial, Bogotá, Colombia, 28 de enero de 1982.
 
-\bibitem{26} Departamento Administrativo Nacional de Estadística (DANE), “Indicadores básicos de tenencia y uso de Tecnologías de la Información y Comunicación en hogares y personas (ENTIC Hogares 2024),” Bogotá, Colombia, 2024. [En línea]. Disponible: https://www.dane.gov.co
 
-\bibitem{27} EDUCAUSE, “2025 EDUCAUSE AI landscape study,” 2025. [En línea]. Disponible: https://www.educause.edu
+%NO ENCONTRE ESTA REFERENCIA
+%\bibitem{25} Departamento Administrativo Nacional de Estadística (DANE), “Indicadores básicos de tenencia y uso de Tecnologías de la Información y Comunicación en hogares y personas (ENTIC Hogares 2024),” Bogotá, Colombia, 2024. [En línea]. Disponible: https://www.dane.gov.co
 
-\bibitem{28} F. J. Jiménez-Mejía, A. G. Pesantes-Pincay, A. S. Menéndez-Menéndez, y J. A. Macías-Vinces, “La brecha digital en la educación virtual: Un análisis de sus causas y consecuencias,” Revista Científica Multidisciplinaria Arbitrada Yachasun, vol. 8, no. 15 Ed. Esp., pp. 69–86, 2024. doi: 10.46296/yc.v8i15edespdic.0554.
 
-\bibitem{29} M. Jukiewicz, “A systematic comparison of large language models for automated assignment assessment in programming education,” preprint, arXiv:2509.26483, 2025.
 
-\bibitem{30} A. Milne, “ChatGPT in the classroom: Exploring its potential and limitations in a Functional Programming course,” preprint, arXiv:2401.11166, 2024.
 
-\bibitem{31} K. Mohamed, M. Yousef, W. Medhat, E. H. Mohamed, G. Khoriba, y T. Arafa, “Hands-on analysis of using large language models for the auto evaluation of programming assignments,” Information Systems, vol. 128, Art. 102473, 2025. doi: 10.1016/j.is.2024.102473.
+%REVISAR
+\bibitem{26} EDUCAUSE, “2025 EDUCAUSE AI landscape study,” 2025. [En línea]. Disponible: https://www.educause.edu
 
-\bibitem{32} Precedence Research, “Artificial intelligence in education market size, share, and trends 2024 to 2034,” 2024. [En línea]. Disponible: https://www.precedenceresearch.com
 
-\bibitem{33} C. Watson y F. W. B. Li, “Failure rates in introductory programming revisited,” en Proceedings of the 2014 Conference on Innovation \& Technology in Computer Science Education (ITiCSE '14), Uppsala, Sweden, 2014, pp. 39–44. doi: 10.1145/2591708.2591749.
+
+
+%MIRAR SI SE AÑADE, YO NO LO HARIA
+%\bibitem{27} F. J. Jiménez-Mejía, A. G. Pesantes-Pincay, A. S. Menéndez-Menéndez, y J. A. Macías-Vinces, “La brecha digital en la educación virtual: Un análisis de sus causas y consecuencias,” Revista Científica Multidisciplinaria Arbitrada Yachasun, vol. 8, no. 15 Ed. Esp., pp. 69–86, 2024. doi: 10.46296/yc.v8i15edespdic.0554.
+
+
+
+\bibitem{28} M. Jukiewicz, “A systematic comparison of large language models for automated assignment assessment in programming education,” preprint, arXiv:2509.26483, 2025.
+
+\bibitem{29} A. Milne, “ChatGPT in the classroom: Exploring its potential and limitations in a Functional Programming course,” preprint, arXiv:2401.11166, 2024.
+
+\bibitem{30} K. Mohamed, M. Yousef, W. Medhat, E. H. Mohamed, G. Khoriba, y T. Arafa, “Hands-on analysis of using large language models for the auto evaluation of programming assignments,” Information Systems, vol. 128, Art. 102473, 2025. doi: 10.1016/j.is.2024.102473.
+
+
+%SE PUEDE AÑADIR COMO UN PARRAFO SOBRE LO LUCRATIVO DE LA IDEA EN EL AMBITO ECONOMICO
+\bibitem{31} Precedence Research, “Artificial intelligence in education market size, share, and trends 2024 to 2034,” 2024. [En línea]. Disponible: https://www.precedenceresearch.com
+
+
+
+\bibitem{32} C. Watson y F. W. B. Li, “Failure rates in introductory programming revisited,” en Proceedings of the 2014 Conference on Innovation \& Technology in Computer Science Education (ITiCSE '14), Uppsala, Sweden, 2014, pp. 39–44. doi: 10.1145/2591708.2591749.
+
+
+%SE PUEDE AÑADIR COMO UN PARRAFO SOBRE LO LUCRATIVO DE LA IDEA EN EL AMBITO ECONOMICO
+\bibitem{33} Mordor Intelligence, “Artificial Intelligence in Education Market Size \& Share Analysis - Industry Research Report - Growth Trends \& Forecasts (2024 - 2029),” 2024. [En línea]. Disponible: https://www.mordorintelligence.com/industry-reports/ai-in-education-market
 
 \end{thebibliography}
 
