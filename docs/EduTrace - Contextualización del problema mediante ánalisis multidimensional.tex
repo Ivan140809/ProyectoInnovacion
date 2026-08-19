@@ -26,7 +26,7 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-EduTrace - Contextualización del problema mediante ánalisis multidimensional
+EduTrace - Contextualización del problema mediante análisis multidimensional
 }
 
 \author{
@@ -74,18 +74,20 @@ EduTrace - Contextualización del problema mediante ánalisis multidimensional
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textit{Resumen}
-
-TODO 
+\begin{abstract}
+	acá ira el abstract
+\end{abstract}
 
 
 \section{Introducción}
 
-En este documento se analiza la retroalimentacion y la situación problema que parte desde
+Este documento analiza como la carencia de una retroalimentación formativa afecta profundamente el proceso de aprendizaje de estudiantes universitarios de cursos introductorios de programación y como una herramienta tecnológica como la IA puede ayudar a docentes a dar una retroalimentación de forma más eficiente sin descuidar la calidad de esta. 
 
-En este documento se analiza un tópico desde diferentes ámbitos, con especial énfasis en el contexto educativo, con el propósito de identificar los principales desafíos asociados a la integración de la inteligencia artificial en los procesos de evaluación y retroalimentación de los estudiantes.
+Para lograr un mejor análisis se tomaron en cuenta diferentes ámbitos en torno a dicha retroalimentación, pues para que la herramienta realmente funcione es necesario tener en cuenta todas las variables que la rodean. 
 
-Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente
+%En este documento se analiza un tópico desde diferentes ámbitos, con especial énfasis en el contexto educativo, con el propósito de identificar los principales desafíos asociados a la integración de la inteligencia artificial en los procesos de evaluación y retroalimentación de los estudiantes.
+
+%Este análisis busca formular una solución que no solo responda al tópico planteado, sino que también permita abordarlo de manera responsable y adecuada. Para ello, en cada ámbito se establecen las condiciones, limitaciones y criterios que deben considerarse durante el diseño y la implementación del sistema, posteriormente se construirá el problema para resolver teniendo en cuenta estas limitaciones y finalmente
 
 \section{Contexto}
     \subsection{Ámbito Pedagógico} 
@@ -97,7 +99,7 @@ Este análisis busca formular una solución que no solo responda al tópico plan
 
     Partiendo de esta base, se establece que la etapa del ¿Qué sigue? en la retroalimentación es aquella en la que la educación presenta mayores dificultades al momento de guiar al estudiante en sus trabajos y proyectos, en especial durante la retroalimentación de tareas, proyectos o algún otro elemento calificable, ya que este modelo requiere una atención detallada, la cual necesita tiempo y no es escalable cuando se tiene una gran cantidad de estudiantes por clase y un alto volumen de entregables. Por ello, esta última etapa es la que más se suele sacrificar en los procesos de aprendizaje y, por lo tanto, el proceso se repliega hacia la calificación.
 
-    Esta debilidad es especialmente crítica en los cursos introductorios de programación, donde hasta un tercio de los estudiantes reprueba el primer curso de programación a nivel mundial, en un área donde la retroalimentación oportuna es más necesaria [19]. En el contexto local de Colombia, y en específico de la Pontificia Universidad Javeriana, se aplicó una encuesta propia a 50 estudiantes de introducción a la programación [Anexo A], la cual evidenció que el 67% de la población percibió el curso con una dificultad media-alta y que el 66% consideró que esas dificultades eran comunes o muy comunes entre sus compañeros, mostrando un problema generalizado en el entorno que se quiere analizar. Además, el 72% reconoció la retroalimentación como útil para mejorar su código, mostrando una demanda real de acompañamiento formativo que las condiciones actuales no alcanzan a satisfacer, lo que evidencia una brecha entre la retroalimentación que la enseñanza de la programación requiere y la que las condiciones reales permiten sostener.
+    Esta debilidad es especialmente crítica en los cursos introductorios de programación, donde hasta un tercio de los estudiantes reprueba el primer curso de programación a nivel mundial, en un área donde la retroalimentación oportuna es más necesaria [19]. En el contexto local de Colombia, y en específico de la Pontificia Universidad Javeriana, se aplicó una encuesta propia a 50 estudiantes de introducción a la programación [Anexo A], la cual evidenció que el 67\% de la población percibió el curso con una dificultad media-alta y que el 66\% consideró que esas dificultades eran comunes o muy comunes entre sus compañeros, mostrando un problema generalizado en el entorno que se quiere analizar. Además, el 72\% reconoció la retroalimentación como útil para mejorar su código, mostrando una demanda real de acompañamiento formativo que las condiciones actuales no alcanzan a satisfacer, lo que evidencia una brecha entre la retroalimentación que la enseñanza de la programación requiere y la que las condiciones reales permiten sostener.
 
     Con ello, cabe aclarar que la dificultad de retroalimentar en programación tiene varias raíces: un mismo problema puede admitir muchas soluciones válidas, y un programa puede funcionar correctamente y aun así estar mal estructurado, ser poco legible o carecer de documentación. Evaluar estos aspectos exige un criterio experto que va más allá de verificar si el código funciona, lo que hace que la retroalimentación de calidad sea, en este dominio, más costosa en tiempo y más dependiente del juicio del docente.
     
@@ -110,7 +112,7 @@ Este análisis busca formular una solución que no solo responda al tópico plan
 
     Con este panorama, la llegada de herramientas tecnologicas y de los modelos de lenguaje a gran escala introduce un cambio relevante, pues estas herramientas tecnológicas han facilitado una retroalimentación más elaborada, contextual y más cercana al lenguaje humano que las herramientas previas [16]. La evidencia sugiere que, dentro de unos parámetros establecidos y con criterios de evaluación claros, estos modelos pueden aproximarse a la calidad de un evaluador humano [16]. Sin embargo, estas herramientas aún siguen condicionadas al diseño de las tareas y a los criterios que se les proporcionen. Además, las investigaciones actuales han prestado poca atención a cómo se integra el criterio del docente en este proceso, lo que replantea el rol del humano en la evaluación mediada e integrada por la IA.
 
-    La evidencia reciente en cursos introductorios de programación muestra que una herramienta tecnologica alcanzó un 86% de exactitud frente a la calificación humana en más de 6.000 entregas analizadas [20]. Sin embargo, la concordancia con el criterio real del docente es solo moderada, por lo que la investigación converge especialmente en  modelos human-in-the-loop, en los que la herramienta asiste pero el criterio final permanece humano y cercano a el profesor [21].
+    La evidencia reciente en cursos introductorios de programación muestra que una herramienta tecnologica alcanzó un 86\% de exactitud frente a la calificación humana en más de 6.000 entregas analizadas [20]. Sin embargo, la concordancia con el criterio real del docente es solo moderada, por lo que la investigación converge especialmente en  modelos human-in-the-loop, en los que la herramienta asiste pero el criterio final permanece humano y cercano a el profesor [21].
 
     A partir de ello, se establece que estas herramientas pueden ser muy beneficiosas al momento de utilizarlas. Sin embargo, también presentan riesgos relacionados con la confiabilidad y la consistencia de sus resultados, así como con la posibilidad de reproducir sesgos presentes en sus datos y con la necesidad de asegurar que la retroalimentación generada impulse efectivamente el aprendizaje y no se limite únicamente a entregar un resultado [17]. En este sentido, la literatura coincide en que la tecnología actual no permite excluir el rol del docente en los procesos de calificación y retroalimentación de trabajos. Esta brecha entre las capacidades tecnológicas actuales y la necesidad de una retroalimentación formativa de calidad evidencia la importancia de desarrollar herramientas que integren la participación del docente sin renunciar a las ventajas que ofrece la inteligencia artificial.
 
